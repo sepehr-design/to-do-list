@@ -1,5 +1,7 @@
 const fatherlist = document.getElementById('fatherlist');
 const loader = document.getElementById('loading');
+let checking = document.getElementById('hoverTab');
+let subBox;
 function listGen(act,bool) {
     bool = bool.toString();
     let mainDiv= document.createElement("div");
@@ -15,6 +17,7 @@ function listGen(act,bool) {
     editIcon.classList.add("fa-edit" ,"icon" ,"EDIcon" ,"SIcon");
     editIcon.title = "Edit";
     editButton.appendChild(editIcon)
+    editButton.addEventListener("click", editAdd)
     let deleteButton= document.createElement("button");
     let deleteIcon= document.createElement("i");
     deleteIcon.classList.add("fa-trash" ,"icon" ,"DLIcon" ,"SIcon");
@@ -61,19 +64,53 @@ function check() {
         change.classList.replace('CheckIconFalse','CheckIconTrue');
         change.classList.replace('fa-circle-o','fa-check-circle-o');
     }
-
 }
-
+function openAdd(){
+    let hoverBox = document.getElementById("hoverTab");
+    hoverBox.style.display = "flex";
+}
+function editAdd(){
+    openAdd();
+    let editBox = this.parentElement;
+    let checkingBe = editBox.children[2];
+    checking = checkingBe.children[0];
+    let mainBox = editBox.parentElement;
+    subBox = mainBox.children[0];
+    document.getElementById('text').value = subBox.innerHTML;
+}
+let page = document.getElementById("add");
+page.addEventListener('click',openAdd)
+function closeAdd(){
+    let hoverBox = document.getElementById("hoverTab")
+    hoverBox.style.display = "none";
+}
+let closer = document.getElementById("closeBtn");
+closer.addEventListener('click',closeAdd)
+function submitChange(){
+    let change = document.getElementById("text").value;
+    console.log(checking);
+    if(checking.classList.contains('SIcon')){
+        subBox.innerHTML = change;
+        checking = document.getElementById('hoverTab');
+        document.getElementById("text").value=null;
+        closeAdd();
+    }else{
+        listGen(change,false);
+        document.getElementById("text").value=null;
+        closeAdd();
+    }
+}
+let submitBtn = document.getElementById("subBtn");
+submitBtn.addEventListener('click',submitChange);
 
 fetch("https://dummyjson.com/todos")
 .then(res => res.json())
 .then(data => {
     loader.remove();
     for (let i = 0; i < data.todos.length; i++) {
-        if (i>0) {
-            let line = document.createElement("hr");
-            fatherlist.appendChild(line);
-        }
         listGen(data.todos[i].todo,data.todos[i].completed);
+        // if (i==data.todos.length-1) {
+        //
+        // }
     }
 })
