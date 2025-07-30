@@ -48,7 +48,6 @@ function listGen(act,bool,id) {
     listInputDiv.appendChild(checkButton);
     mainDiv.appendChild(mainP);
     mainDiv.appendChild(listInputDiv);
-    mainDiv.id=id.toString();
     fatherlist.appendChild(mainDiv);
 }
 
@@ -173,7 +172,8 @@ function changeStyle(){
     const SIcon2 = document.getElementById("darkSIcon2");
     SIcon2.classList.toggle('darkModeSIcon');
     let list2 = document.getElementsByClassName("gIcon")
-    for(i in list2){
+
+    for(let i=0 ;i<list2.length ;i++){
         list2[i].classList.toggle('darkModeSIcon');
     }
 }
