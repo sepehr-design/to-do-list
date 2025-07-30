@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="css/style.css">
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">-->
 </head>
 <body>
-$END$
+
+<div class="main">
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <h1>To Do List</h1>
+                <button class="add"><i class="fa-edit icon">Add</i> </button>
+            </div>
+            <div class="mode">
+                <i class="fa fa-moon-o icon modeI" title="Dark Mode"></i>
+                <button class="mode-button" title="Change Mode"><i class="mode-buttonT fa fa-toggle-off icon" id="DarkToggle"></i></button>
+                <i class="fa fa-sun-o icon modeI" title="Light Mode"></i>
+            </div>
+        </div>
+        <div class="list-con" id="fatherlist">
+            <div class="loading" id="loading">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="up" id="upBtn" >
+    <i class="fa fa-chevron-up icon SIcon uper" title="Go To Top"></i>
+</button>
+<!--<div id="beta">-->
+<!--    <button class="betaBtn" onclick="listGen('dqhuif we gwg  ggwe gwwge g',true)"></button>-->
+<!--</div>-->
+<script src="index.js"></script>
 </body>
+
 </html>
