@@ -167,13 +167,22 @@ hr{
     .main{
         width: 95%;!important;
     }
+    .mode{
+        font-size: 1.5em;
+    }
     .container{
         padding: 0 10px;
+    }
+    .listIt{
+        font-size: 1.5em;
     }
     .up{
         right: 20px;
     }
     .uper{
         background: rgba(12, 55, 79, 0.3);
+    }
+    .SIcon{
+        font-size: 1.5em;
     }
 }
