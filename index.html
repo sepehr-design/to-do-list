@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="css/style.css">
 <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">-->
 </head>
-<body>
+<body class="darkModeBody">
 
-<div class="main">
+<div class="main darkModeMain" id="darkModeMain">
     <div class="container">
-        <div class="header">
+        <div class="header darkModeHeader" id="darkModeHeader">
             <div class="title">
                 <h1>To Do List</h1>
-                <button class="add" id="add"><i class="fa-edit icon">Add</i> </button>
+                <button class="add darkModeAdd" id="add"><i class="fa-edit icon">Add</i> </button>
             </div>
-            <div class="mode">
+            <div class="mode darkModeMode" id="darkModeMode">
                 <i class="fa-moon-o icon modeI" title="Dark Mode"></i>
-                <button class="mode-button" title="Change Mode"><i class="mode-buttonT fa-toggle-off icon" id="DarkToggle"></i></button>
+                <button class="mode-button" id="darkMode" title="Change Mode"><i class="mode-buttonT darkModeMode-buttonT fa-toggle-off icon" id="DarkToggle"></i></button>
                 <i class="fa-sun-o icon modeI" title="Light Mode"></i>
             </div>
         </div>
-        <div class="list-con" id="fatherlist">
+        <div class="listCon darkModeListCon" id="fatherlist">
             <div class="loading" id="loading">
                 <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
             </div>
@@ -31,21 +31,19 @@
     </div>
 </div>
 <button class="up" id="upBtn" >
-    <i class="fa fa-chevron-up icon SIcon uper" title="Go To Top"></i>
+    <i class="fa fa-chevron-up icon SIcon darkModeSIcon uper darkModeUper" id="darkSIcon" title="Go To Top"></i>
 </button>
 <div class="hoverTab" id="hoverTab">
-    <div class="textEditor">
+    <div class="textEditor darkModeTextEditor" id="darkModeTextEditor">
         <div class="textCont">
-            <h1 class="added">Add Your Task</h1>
-            <button class="closeBtn" id="closeBtn"><i class="fa-close icon SIcon"></i></button>
+            <h1 class="added darkModeAdded" id="darkModeAdded"></h1>
+            <button class="closeBtn" id="closeBtn"><i class="fa-close icon SIcon darkModeSIcon" id="darkSIcon2"></i></button>
         </div>
-        <textarea class="text" id="text" placeholder="Enter Your Task ..."></textarea>
+        <textarea class="text darkModeText" id="text" placeholder="Enter Your Task ..."></textarea>
         <button class="subBtn" id="subBtn">Submit</button>
     </div>
 </div>
-<!--<div id="beta">-->
-<!--    <button class="betaBtn" onclick="listGen('dqhuif we gwg  ggwe gwwge g',true)"></button>-->
-<!--</div>-->
+
 <script src="index.js"></script>
 </body>
 

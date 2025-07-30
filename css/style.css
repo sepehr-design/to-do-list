@@ -6,11 +6,14 @@ html{
     scroll-behavior: smooth
 }
 body{
-    background: #254d6a;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 15px 10px;
+    background: #856c6c;
+}
+.darkModeBody{
+    background: #254d6a;!important;
 }
 
 .icon::before{
@@ -21,12 +24,20 @@ body{
 }
 .SIcon{
     border-radius: 50%;
-    color: #3b81ea;
     padding: 5px 9px;
     margin: 0 5px;
     font-size: 2em;
+    color: #7b643b;
+    background: #ac9e9e;
+}
+.darkModeSIcon{
+    color: #3b81ea;
+    background: rgba(0,0,0,0);!important;
 }
 .SIcon:hover{
+    background: #776b6b;
+}
+.darkModeSIcon:hover{
     background: #194064;
 }
 button{
@@ -39,24 +50,32 @@ button{
     flex-direction: column;
     align-items: stretch;
     justify-content: start;
-    background: #0c374f;
     width: 65%;
     overflow: hidden;
     border-radius: 30px;
+    background: #7b643b;
+}
+.darkModeMain{
+    background: #0c374f;
     color: #bfbfbf;
-
 }
 .title{
     display: flex;
 }
 .add{
     border-radius: 8px;
-    color: #3b81ea;
     padding: 5px 9px;
     margin: 0 5px;
     font-size: 2em;
+    color: #7b643b;
+}
+.darkModeAdd{
+    color: #3b81ea;
 }
 .add:hover{
+    background: #8b7e7e;
+}
+.darkModeAdd:hover{
     background: #194064;
 }
 .container{
@@ -73,9 +92,12 @@ button{
     align-items: center ;
     justify-content: space-between;
     padding: 10px 20px;
-    background: #254d6a;
     border-radius: 30px;
     margin: 20px 20px;
+    background: #c7c7c7;
+}
+.darkModeHeader{
+    background: #254d6a;
 }
 .mode{
     display: flex;
@@ -84,6 +106,9 @@ button{
     justify-content: center;
     font-size: 2em;
     margin: 5px 0;
+    color: #7b643b;
+}
+.darkModeMode{
     color: #3b81ea;
 }
 .modeI{
@@ -91,12 +116,18 @@ button{
 }
 .mode-buttonT{
     border-radius: 50%;
-    color: #3b81ea;
     padding: 5px 5px;
     margin: 0 1px;
     font-size: 2em;
+    color: #7b643b;
+}
+.darkModeMode-buttonT{
+    color: #3b81ea;
 }
 .mode-buttonT:hover{
+    background: #af9e9e;
+}
+.darkModeMode-buttonT:hover{
     background: #194064;
 }
 .CheckIconTrue{
@@ -105,16 +136,19 @@ button{
 .CheckIconFalse{
     color: red;
 }
-.list-con{
+.listCon{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center ;
     justify-content: space-between;
     padding: 10px 20px;
-    background: #254d6a;
     border-radius: 30px;
     margin: 20px 20px;
+    background: #c7c7c7;
+}
+.darkModeListCon{
+    background: #254d6a;
 }
 .listIt{
     width: 100%;
@@ -124,8 +158,11 @@ button{
     justify-content: space-between;
     padding: 5px 0 10px 0;
     font-size: 2em;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #8f7b7b;
     margin: 5px 0;
+}
+.darkModeListIt{
+    border-bottom: 1px solid black;
 }
 hr{
     width: 90%;
@@ -133,20 +170,6 @@ hr{
 }
 .listInput{
     display: flex;
-}
-#beta{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    width: 100px;
-    background: white;
-}
-.betaBtn{
-    height: 50px;
-    width: 50px;
-    background: black;
 }
 .up{
     display: none;
@@ -156,6 +179,10 @@ hr{
 }
 .uper{
     padding: 1em;
+    background: rgba(166, 135, 135, 0.9);
+
+}
+.darkModeUper{
     background: rgba(12, 55, 79, 0.9);
 }
 .hoverTab{
@@ -176,8 +203,12 @@ hr{
     justify-content: space-around;
     width: 32%;
     height: 35%;
-    background: #0c374f;
     border-radius: 0.5em;
+    background: #7b643b;
+    border: 1px solid #8f7b7b;
+}
+.darkModeTextEditor{
+    background: #0c374f;
     border: 1px solid #3d6fbd;
 }
 .textCont{
@@ -187,8 +218,11 @@ hr{
     justify-content: space-around;
 }
 .added{
-    color: #dddddd;
     font-size: 2em;
+    color: #3b3223;
+}
+.darkModeAdded{
+    color: #dddddd;
 }
 .closeBtn{
     position: absolute;
@@ -199,8 +233,11 @@ hr{
     height: 53%;
     border-radius: 0.5em;
     border: 0;
-    color: #776d6d;
     padding: 1em;
+    color: #7b643b;
+}
+.darkModeText{
+    color: #776d6d;
 }
 .subBtn{
     background: #d6ef3c;
@@ -245,6 +282,9 @@ hr{
         right: 20px;
     }
     .uper{
+        background: rgba(166, 135, 135, 0.3);
+    }
+    .darkModeUper{
         background: rgba(12, 55, 79, 0.3);
     }
     .SIcon{
