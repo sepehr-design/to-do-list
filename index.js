@@ -23,6 +23,7 @@ function listGen(act,bool) {
     deleteIcon.classList.add("fa-trash" ,"icon" ,"DLIcon" ,"SIcon");
     deleteIcon.title = "Delete";
     deleteButton.appendChild(deleteIcon);
+    deleteButton.addEventListener("click", deleteAdd);
     let checkButton= document.createElement("button");
     let checkIcon= document.createElement("i");
     checkIcon.classList.add("icon", "SIcon");
@@ -77,6 +78,13 @@ function editAdd(){
     let mainBox = editBox.parentElement;
     subBox = mainBox.children[0];
     document.getElementById('text').value = subBox.innerHTML;
+}
+function deleteAdd(){
+    let deleteBox = this.parentElement;
+    let mainDelete = deleteBox.parentElement;
+    if(confirm('Are you sure?')){
+        mainDelete.remove();
+    }else {}
 }
 let page = document.getElementById("add");
 page.addEventListener('click',openAdd)
