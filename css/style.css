@@ -167,6 +167,12 @@ hr{
     .main{
         width: 95%;!important;
     }
+    h1{
+        font-size: 1.5em;
+    }
+    .add{
+        font-size: 1.3em;
+    }
     .mode{
         font-size: 1.5em;
     }
@@ -174,7 +180,7 @@ hr{
         padding: 0 10px;
     }
     .listIt{
-        font-size: 1.5em;
+        font-size: 1em;
     }
     .up{
         right: 20px;
