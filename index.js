@@ -83,6 +83,7 @@ page.addEventListener('click',openAdd)
 function closeAdd(){
     let hoverBox = document.getElementById("hoverTab")
     hoverBox.style.display = "none";
+    document.getElementById("text").value=null;
 }
 let closer = document.getElementById("closeBtn");
 closer.addEventListener('click',closeAdd)
@@ -92,11 +93,9 @@ function submitChange(){
     if(checking.classList.contains('SIcon')){
         subBox.innerHTML = change;
         checking = document.getElementById('hoverTab');
-        document.getElementById("text").value=null;
         closeAdd();
     }else{
         listGen(change,false);
-        document.getElementById("text").value=null;
         closeAdd();
     }
 }
